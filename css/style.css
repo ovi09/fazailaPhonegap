@@ -1,0 +1,123 @@
+nav li.dropdown ul {
+	display: none;
+}
+nav li:focus.dropdown ul {
+	display: block;
+}
+.side-nav {
+    top: 65px;
+}
+.side-nav li {
+    border-bottom: 1px solid #DEDEDE;
+}
+.side-nav a {
+    height: 45px;
+    line-height: 45px;
+    padding-left: 12px;
+}
+nav a.button-collapse img {
+    max-width: 49px;
+    padding: 15px 7px;
+}
+li.dropdown {
+    position: relative;
+}
+li.dropdown:after {
+    content: "";
+    position: absolute;
+    background: url(../img/down_arrow.png);
+    width: 18px;
+    height: 10px;
+    top: 19px;
+    right: 15px;
+}
+.side-nav li.dropdown li {
+    border-bottom: none;
+    border-top: 1px solid #DEDEDE;
+    padding-left: 15px;
+}
+
+
+
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	z-index: 999;
+}
+nav ul a {
+	display: block;
+}
+.app_info {
+    position: absolute;
+    right: 10px;
+    margin-top: 6px;
+    cursor: pointer;
+    top: -3px;
+    max-height: 58px;
+}
+.more_menu {
+    position: absolute;
+    right: 0;
+    background: #EE6E73;
+    z-index: 111;
+    top: 64px;
+	display: none;
+}
+.more_menu li {
+    float: inherit;
+    line-height: 45px;
+    width: 100%;
+    overflow: hidden;
+}
+.more_menu i,
+.more_menu img {
+    float: left;
+    margin-right: 15px;
+}
+.more_menu img {
+    margin-top: 10px;
+    max-width: 25px;
+}
+
+
+
+
+
+
+
+.content,
+ul.collection {
+    margin-top: 60px;
+}
+.card .card-content p {
+	text-align: justify;
+}
+.collection-item a {
+	color: #888;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+	nav .brand-logo {
+		font-size: 19px;
+	}
+	nav a.button-collapse img {
+		padding: 11px 7px;
+	}
+	.side-nav{
+		top: 58px;
+	}
+	.more_menu{
+		top: 56px;
+	}
+}
