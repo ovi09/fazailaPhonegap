@@ -30,32 +30,50 @@ function load_parse()
 				 for(i=0;i<data.length;i++)
 				 {
 				   var  part_nev='';
+					 if(i==data.length-1)
+					 { 
+					   alert(part_nev);
+					 }
+				 
 				   part_nev+='<li class="dropdown"><a href="#">'+data[i].title+'</a><ul>';
-				   for(j=0;j<length;j++)
-				   {
-				      
-				       if(event_data[j].cat_id==data[i].id)
+				    
+					
+					var j=0;
+				    var rander=function()
+					{
+					   if(j<length)
 					   {
-					     part_nev+='<li><a href="collapsible.html">'+event_data[j].title+'</a></li>';
-						 console.log(event_data[j].cat_id+'-------------'+event_data[j].title);
-					   }
-					   
-					   
-					   
-				   }
-				   part_nev+='</ul></li>';
+						  
+						   if(event_data[j].cat_id==data[i].id)
+						   {
+						     part_nev+='<li><a href="collapsible.html">'+event_data[j].title+'</a></li>';
+							 
+							 console.log(event_data[j].cat_id+'-------------'+event_data[j].title);
+						   }
+						   j++;
+						   rander();
+					    }
+						
+				     else
+					 {
+					     part_nev+='</ul></li>';
+						//alert(part_nev);
+						$("#mobile-demo").append(part_nev);
+					 }
+				   };
+				   rander();
+				  
 				 
 				   
-				   console.log(part_nev);
-				   nev_text+=part_nev;
+				 
+				   
+				
+				
 				   
 				   
 				 }
-				 
-				  var res = nev_text.replace("undefined", ""); 
-				
-				$("#mobile_demo").html(res);
-				alert(res);
+				// $("#mobile-demo").html(res);
+
 		
 				var i;
 				/*for(i=0;i<trac_id.length;i++)

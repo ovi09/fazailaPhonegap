@@ -1,9 +1,9 @@
 $(document).ready(function(){
-	$(".button-collapse").sideNav();
-	
 	$("nav li.dropdown").click(function(){
 		$("ul", this).slideToggle(600);
 	});
+	$(".button-collapse").sideNav();
+	
 	// More Menu Option
 	$(".app_info").click(function(){
 		$(".more_menu").fadeToggle(500);
